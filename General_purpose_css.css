@@ -208,6 +208,12 @@
 .image-border-xl img   { border: 20px solid var(--background-modifier-border); }
 .image-border-xxl img  { border: 24px solid var(--background-modifier-border); }
 .image-border-xxxl img { border: 32px solid var(--background-modifier-border); }
+/* Border custom border */
+.image-border-custom1 img  {
+  border-width: 16px;
+  border-bottom-width: 64px;
+  border-style: solid;
+}
 
 /* Border colors */
 /* Basic colors */
