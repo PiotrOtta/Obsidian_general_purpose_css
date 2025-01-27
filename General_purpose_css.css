@@ -11,11 +11,7 @@
 ? Obsidian (Options -> Appearance -> CSS Snippets -> general-purpose-css) 
 */
 /* 
-! You can achieve getting suggestions of classes
-! if you create a empty note and insert all classes
-! from this file into cssclasses metadata. Then all
-! classes will be suggested when typing in other notes.
-? Instruction how to do that on github page:
+? Check out documentation website for those classes on github page:
 ? https://github.com/PiotrOtta/Obsidian_general_purpose_css 
 */
 /* 
@@ -264,9 +260,16 @@
 .image-border-pastel-purple img { border-color: #cbaacb !important; }
 .image-border-pastel-orange img { border-color: #ffb347 !important; }
 /* Custom Hex Colors */
-.image-border-custom-1 { border-color: #123456 !important; }
-.image-border-custom-2 { border-color: #abcdef !important; }
-.image-border-custom-3 { border-color: #654321 !important; }
+.image-border-custom-color-1 { border-color: #123456 !important; }
+.image-border-custom-color-2 { border-color: #abcdef !important; }
+.image-border-custom-color-3 { border-color: #654321 !important; }
+
+/* Experimental */
+.center-images img {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
 
 /* 
 ┌─────────────┐
@@ -912,12 +915,6 @@ codeblock-fit codeblock-compact
   font-size: 18px;
 }
 
-.center-images img {
-  display: block !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
 .embed-border-none {
   --embed-border-left: 0 solid black;
 }
@@ -956,3 +953,11 @@ codeblock-fit codeblock-compact
 .h5-right :is( h5,.HyperMD-header.HyperMD-header-5) { text-align: right; }
 .h6-center :is( h6,.HyperMD-header.HyperMD-header-6) { text-align: center; }
 .h6-right :is( h6,.HyperMD-header.HyperMD-header-6) { text-align: right; }
+
+/* Text positioning */
+.text-center :is( p, .cm-line):not([class*=" "]:not(.cm-line.cm-active)) {
+  text-align: center;
+}
+.text-right :is( p, .cm-line):not([class*=" "]:not(.cm-line.cm-active)) {
+  text-align: right;
+}
