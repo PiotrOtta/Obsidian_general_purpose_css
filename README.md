@@ -1,4 +1,8 @@
-# Obsidian_general_purpose_css
+<p align="center" style="font-size:2rem">Obsidian general purpose css classes</p>
+
+<p align="center">
+   <img src="readmeAssets/General_purpose_css_logo.png" alt="Obsidian general purpose css logo" title="Obsidian general purpose css logo" height="220" />
+</p>
 
 ## About
 This is a set of classes for obisidan notes.
