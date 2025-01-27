@@ -1,4 +1,10 @@
-<p align="center" style="font-size:2rem">Obsidian general purpose css classes</p>
+<div id="user-content-toc">
+  <ul align="center" style="list-style: none;">
+    <summary>
+      <h1>Obsidian general purpose css classes</h1>
+    </summary>
+  </ul>
+</div>
 
 <p align="center">
    <img src="readmeAssets/General_purpose_css_logo.png" alt="Obsidian general purpose css logo" title="Obsidian general purpose css logo" height="220" />
