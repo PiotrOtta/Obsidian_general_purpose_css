@@ -1,7 +1,7 @@
 <div id="user-content-toc">
   <ul align="center" style="list-style: none;">
     <summary>
-      <h1>Obsidian general purpose css classes</h1>
+      <h1>Obsidian general purpose 𝘾𝙎𝙎 classes</h1>
     </summary>
   </ul>
 </div>
@@ -11,7 +11,7 @@
 </p>
 
 ## About
-This is a set of classes for obisidan notes.
+This is a set of classes for 𝙊𝙗𝙞𝙨𝙞𝙙𝙖𝙣 𝙣𝙤𝙩𝙚𝙨 𝙖𝙥𝙥.
 
 Few images of what You can achieve with those classes and their combinations:
 
