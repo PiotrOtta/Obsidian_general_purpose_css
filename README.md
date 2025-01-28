@@ -11,62 +11,78 @@
 </p>
 
 ## About
-This is a set of classes for <b>Obsidian notes app</b>.
+This repository contains a set of CSS classes designed specifically for the <b>Obsidian Notes app</b>. 
 
-Few images of what You can achieve with those classes and their combinations:
+With these classes you can enhance the appearance of your notes, images, code blocks, titles, and blockquotes.
 
-1. `image-border-custom1 image-border-cyan image-radius-sm`
+## Example of customization
 
-<img src="readmeAssets/styledImage.png" alt="Styled image" width="460"/>
+1. <b>Image styling</b>
 
-2. `codeblock-fit` -> <b><i>only in preview mode</i></b>
+Classes: `image-border-custom1`, `image-border-beige`, `image-radius-sm`
 
-<img src="readmeAssets/styledCodeblock.png" alt="Styled codeblock" width="260"/>
+<img style="margin-bottom:20px" src="readmeAssets/styledImage.png" alt="Styled image" width="460"/>
 
-3. `center-images titles-center text-center`
+2. <b>Codeblock styling</b>
 
-<img src="readmeAssets/styledCenter.png" alt="Centered titles, images and texts" width="460"/>
+Class: `codeblock-fit` <i>(Preview mode only)</i>
 
-4. `blockquote-note-compact blockquote-tip-custom1 blockquote-important-fit blockquote-warning-custom2 blockquote-caution-title-right blockquote-caution-text-center`
+<img style="margin-bottom:20px" src="readmeAssets/styledCodeblock.png" alt="Styled codeblock" width="260"/>
 
-<img src="readmeAssets/styledBlockquotes.png" alt="Styled blockquotes" width="460"/>
+3. <b>Centering elements</b>
 
-...and many more unique combinations!
+Classes: `center-images`, `titles-center`, `text-center`
 
-## How to install
+<img style="margin-bottom:20px" src="readmeAssets/styledCenter.png" alt="Centered titles, images and texts" width="460"/>
+
+4. <b>Blockquote styling</b>
+
+Classes: `blockquote-note-compact`, `blockquote-tip-custom1`, `blockquote-important-fit`, `blockquote-warning-custom2`, `blockquote-caution-title-right`, `blockquote-caution-text-center`
+
+<img style="margin-bottom:20px" src="readmeAssets/styledBlockquotes.png" alt="Styled blockquotes" width="460"/>
+
+…and many other unique combinations!
+
+## Installation
 
 1. Open <b>Obsidian</b>
-2. Go to <b>settings</b> (default keyboard shortcut `ctrl+,`)
-3. In <i>Options</i> section, find <b>Appearance</b>
-4. Scroll down to <b>CSS Snippets</b>
-5. Open snippets folder
-6. Download `General_purpose_css.css` file and place it in snippets folder
-7. Enable `General_purpose_css` in <i>CSS Snippets</i> section (refresh if not visible)
+2. Navigate to <b>settings</b> (default shortcut: `ctrl+,`)
+3. Under the <i>Options</i> section, select <b>Appearance</b>
+4. Scroll down to the <b>CSS Snippets</b>
+5. Click <b>Open snippets folder</b> icon
+6. Download `General_purpose_css.css` file and place it in the snippets folder
+7. Enable `General_purpose_css` snippet in <i>CSS Snippets</i> section (refresh if it doesn't appear)
 
-## How to use
+## Usage
 
-1. At the beginning of the note, add file property by:
-  - writing:
-```
+To apply CSS classes in a Obisidan note:
+
+1. add a file property at the beginning of your note (two ways):
+  - manually type:
+```yaml
 ---
 cssClasses
+---
 ```
-  - right click on the tab and choose `Add file property` and click on `cssclasses`
-2. Paste any of the desired class from the list of [all classes](#all-css-classes) <s>or use [documentation app](https://github.com/PiotrOtta/Obsidian_general_purpose_css).</s> (WIP)
+  - Or right click the opened note tab and choose `Add file property`. Then select `cssclasses`
+2. Paste any desired class from the list of [all CSS classes](#all-css-classes) <s>or use [documentation app](https://github.com/PiotrOtta/Obsidian_general_purpose_css).</s> (WIP)
 
 ## Documentation
 
-Documentation of classes and previews are hosted on github page:
+Detailed documentation for the classes, including previews and usage examples, is under development and will be hosted on the GitHub page:
 
 (WIP) <s>https://github.com/PiotrOtta/Obsidian_general_purpose_css  </s>
 
 ## Contribution and more
 
-- Feel free to add your own classes,
-- fork the repo,
-- or create new pull request:
-  - with your own addition of css classes,
-  - with ideas to what to add.
+Here's how you can get involved:
+
+- add your own custom classes,
+- fork the repository,
+- submit [pull request](https://github.com/PiotrOtta/Obsidian_general_purpose_css/pulls) with:
+  - your CSS addition,
+  - suggestions for new features or enhancements,
+  - bugs.
 
 ## All css classes
 (497 total)
