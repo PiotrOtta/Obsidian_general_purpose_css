@@ -147,48 +147,90 @@
 .image-shadow-bottom-xl img  { box-shadow: 0 10px 20px var(--shadow-color, rgba(0, 0, 0, 60%)); }
 .image-shadow-bottom-xxl img { box-shadow: 0 24px 48px var(--shadow-color, rgba(0, 0, 0, 60%)); }
 
+/* Filter apply */
+.image-saturate-xs img,
+.image-saturate-sm img,
+.image-saturate-md img,
+.image-saturate-lg img,
+.image-saturate-xl img,
+.image-saturate-xxl img,
+.image-sepia-xs img,
+.image-sepia-sm img,
+.image-sepia-md img,
+.image-sepia-lg img,
+.image-sepia-xl img,
+.image-sepia-xxl img,
+.image-blur-xs img,
+.image-blur-sm img,
+.image-blur-md img,
+.image-blur-lg img,
+.image-blur-xl img,
+.image-blur-xxl img,
+.image-brightness-xs img,
+.image-brightness-sm img,
+.image-brightness-md img,
+.image-brightness-lg img,
+.image-brightness-xl img,
+.image-brightness-xxl img,
+.image-contrast-xs img,
+.image-contrast-sm img,
+.image-contrast-md img,
+.image-contrast-lg img,
+.image-contrast-xl img,
+.image-contrast-xxl img,
+.image-grayscale-xs img,
+.image-grayscale-sm img,
+.image-grayscale-md img,
+.image-grayscale-lg img,
+.image-grayscale-xl img,
+.image-grayscale-xxl img {
+  --fgrayscale: 0;
+
+  filter: saturate(var(--fsaturate, 1)) sepia(var(--fsepia, 0)) blur(var(--fblur, 0))
+    brightness(var(--fbrightness, 1)) contrast(var(--fcontrast, 1)) grayscale(var(--fgrayscale, 0));
+}
 /* Saturation */
-.image-saturate-xs img { filter: saturate(1.2); }
-.image-saturate-sm img { filter: saturate(1.5); }
-.image-saturate-md img { filter: saturate(2); }
-.image-saturate-lg img { filter: saturate(3); }
-.image-saturate-xl img { filter: saturate(4); }
-.image-saturate-xxl img { filter: saturate(5); }
+.image-saturate-xs img { --fsaturate: 1.2; }
+.image-saturate-sm img { --fsaturate: 1.5; }
+.image-saturate-md img { --fsaturate: 2; }
+.image-saturate-lg img { --fsaturate: 3; }
+.image-saturate-xl img { --fsaturate: 4; }
+.image-saturate-xxl img { --fsaturate: 5; }
 /* Sepia */
-.image-sepia-xs img { filter: sepia(0.2); }
-.image-sepia-sm img { filter: sepia(0.4); }
-.image-sepia-md img { filter: sepia(0.6); }
-.image-sepia-lg img { filter: sepia(0.8); }
-.image-sepia-xl img { filter: sepia(1); }
-.image-sepia-xxl img { filter: sepia(1.2); }
+.image-sepia-xs img { --fsepia: 0.2; }
+.image-sepia-sm img { --fsepia: 0.4; }
+.image-sepia-md img { --fsepia: 0.6; }
+.image-sepia-lg img { --fsepia: 0.8; }
+.image-sepia-xl img { --fsepia: 1; }
+.image-sepia-xxl img { --fsepia: 1.2; }
 /* Blur */
-.image-blur-xs img { filter: blur(1px); }
-.image-blur-sm img { filter: blur(2px); }
-.image-blur-md img { filter: blur(4px); }
-.image-blur-lg img { filter: blur(6px); }
-.image-blur-xl img { filter: blur(8px); }
-.image-blur-xxl img { filter: blur(10px); }
+.image-blur-xs img { --fblur: 1px; }
+.image-blur-sm img { --fblur: 2px; }
+.image-blur-md img { --fblur: 4px; }
+.image-blur-lg img { --fblur: 6px; }
+.image-blur-xl img { --fblur: 8px; }
+.image-blur-xxl img { --fblur: 10px; }
 /* Brightness */
-.image-brightness-xs img { filter: brightness(1.1); }
-.image-brightness-sm img { filter: brightness(1.2); }
-.image-brightness-md img { filter: brightness(1.5); }
-.image-brightness-lg img { filter: brightness(2); }
-.image-brightness-xl img { filter: brightness(3); }
-.image-brightness-xxl img { filter: brightness(4); }
+.image-brightness-xs img { --fbrightness: 1.1; }
+.image-brightness-sm img { --fbrightness: 1.2; }
+.image-brightness-md img { --fbrightness: 1.5; }
+.image-brightness-lg img { --fbrightness: 2; }
+.image-brightness-xl img { --fbrightness: 3; }
+.image-brightness-xxl img { --fbrightness: 4; }
 /* Contrast */
-.image-contrast-xs img { filter: contrast(1.1); }
-.image-contrast-sm img { filter: contrast(1.3); }
-.image-contrast-md img { filter: contrast(1.5); }
-.image-contrast-lg img { filter: contrast(2); }
-.image-contrast-xl img { filter: contrast(3); }
-.image-contrast-xxl img { filter: contrast(4); }
+.image-contrast-xs img { --fcontrast: 1.1; }
+.image-contrast-sm img { --fcontrast: 1.3; }
+.image-contrast-md img { --fcontrast: 1.5; }
+.image-contrast-lg img { --fcontrast: 2; }
+.image-contrast-xl img { --fcontrast: 3; }
+.image-contrast-xxl img { --fcontrast: 4; }
 /* Grayscale */
-.image-grayscale-xs img { filter: grayscale(0.2); }
-.image-grayscale-sm img { filter: grayscale(0.4); }
-.image-grayscale-md img { filter: grayscale(0.6); }
-.image-grayscale-lg img { filter: grayscale(0.8); }
-.image-grayscale-xl img { filter: grayscale(1); }
-.image-grayscale-xxl img { filter: grayscale(1.2); }
+.image-grayscale-xs img { --fgrayscale: 0.2; }
+.image-grayscale-sm img { --fgrayscale: 0.4; }
+.image-grayscale-md img { --fgrayscale: 0.6; }
+.image-grayscale-lg img { --fgrayscale: 0.8; }
+.image-grayscale-xl img { --fgrayscale: 1; }
+.image-grayscale-xxl img { --fgrayscale: 1.2; }
 
 /* Image border radius sizes */
 .image-radius-none img   { border-radius: 0; }
