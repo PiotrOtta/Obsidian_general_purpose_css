@@ -349,13 +349,11 @@ codeblock-fit codeblock-compact
   /* height: 6px; This shrinks the numbers if they are shown */ 
   /* font-size: 0; */
   background-color: var(--background-primary);
-  border: var(--code-background) solid 0;
   height: 1.3rem;
 }
 .codeblock-compact code[class*="language-"], 
 .codeblock-compact pre[class*="language-"] {
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding: 2px;
   min-height: fit-content;
 }
 .codeblock-compact code[class*="language-"] .copy-code-button, 
@@ -385,64 +383,75 @@ codeblock-fit codeblock-compact
 }
 
 /* Codeblock margin sizes - margin disturbes line numbers */
-.codeblock-margin-xs .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-begin-bg, 
-.codeblock-margin-xs code[class*="language-"], 
-.codeblock-margin-xs pre[class*="language-"] { 
+.codeblock-margin-xs .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-begin-bg {
   border-top: 4px solid var(--background-primary); 
 }
-.codeblock-margin-xs .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-end-bg, 
-.codeblock-margin-xs code[class*="language-"], 
-.codeblock-margin-xs pre[class*="language-"]   { 
+.codeblock-margin-xs .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-end-bg {
   border-bottom: 4px solid var(--background-primary); 
 }
-.codeblock-margin-sm .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-begin-bg, 
-.codeblock-margin-sm code[class*="language-"], 
-.codeblock-margin-sm pre[class*="language-"] { 
+.codeblock-margin-xs .el-pre:has(code[class*="language-"]), 
+.codeblock-margin-xs .el-pre:has(pre[class*="language-"]:not(.frontmatter)){ 
+  border-top: 4px solid var(--background-primary); 
+  border-bottom: 4px solid var(--background-primary); 
+}
+
+.codeblock-margin-sm .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-begin-bg {
   border-top: 8px solid var(--background-primary); 
 }
-.codeblock-margin-sm .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-end-bg, 
-.codeblock-margin-sm code[class*="language-"], 
-.codeblock-margin-sm pre[class*="language-"]   { 
+.codeblock-margin-sm .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-end-bg {
   border-bottom: 8px solid var(--background-primary); 
 }
-.codeblock-margin-md .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-begin-bg, 
-.codeblock-margin-md code[class*="language-"], 
-.codeblock-margin-md pre[class*="language-"] { 
+.codeblock-margin-sm .el-pre:has(code[class*="language-"]), 
+.codeblock-margin-sm .el-pre:has(pre[class*="language-"]:not(.frontmatter)){ 
+  border-top: 8px solid var(--background-primary); 
+  border-bottom: 8px solid var(--background-primary); 
+}
+
+.codeblock-margin-md .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-begin-bg {
   border-top: 16px solid var(--background-primary); 
 }
-.codeblock-margin-md .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-end-bg, 
-.codeblock-margin-md code[class*="language-"], 
-.codeblock-margin-md pre[class*="language-"]   { 
+.codeblock-margin-md .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-end-bg {
   border-bottom: 16px solid var(--background-primary); 
 }
-.codeblock-margin-lg .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-begin-bg, 
-.codeblock-margin-lg code[class*="language-"], 
-.codeblock-margin-lg pre[class*="language-"] { 
+.codeblock-margin-md .el-pre:has(code[class*="language-"]), 
+.codeblock-margin-md .el-pre:has(pre[class*="language-"]:not(.frontmatter)){ 
+  border-top: 16px solid var(--background-primary); 
+  border-bottom: 16px solid var(--background-primary); 
+}
+
+.codeblock-margin-lg .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-begin-bg {
   border-top: 24px solid var(--background-primary); 
 }
-.codeblock-margin-lg .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-end-bg, 
-.codeblock-margin-lg code[class*="language-"], 
-.codeblock-margin-lg pre[class*="language-"]   { 
+.codeblock-margin-lg .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-end-bg {
   border-bottom: 24px solid var(--background-primary); 
 }
-.codeblock-margin-xl .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-begin-bg, 
-.codeblock-margin-xl code[class*="language-"], 
-.codeblock-margin-xl pre[class*="language-"] { 
+.codeblock-margin-lg .el-pre:has(code[class*="language-"]), 
+.codeblock-margin-lg .el-pre:has(pre[class*="language-"]:not(.frontmatter)){ 
+  border-top: 24px solid var(--background-primary); 
+  border-bottom: 24px solid var(--background-primary); 
+}
+
+.codeblock-margin-xl .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-begin-bg {
   border-top: 32px solid var(--background-primary); 
 }
-.codeblock-margin-xl .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-end-bg, 
-.codeblock-margin-xl code[class*="language-"], 
-.codeblock-margin-xl pre[class*="language-"]   { 
+.codeblock-margin-xl .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-end-bg {
   border-bottom: 32px solid var(--background-primary); 
 }
-.codeblock-margin-xxl .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-begin-bg, 
-.codeblock-margin-xxl code[class*="language-"], 
-.codeblock-margin-xxl pre[class*="language-"]{ 
+.codeblock-margin-xl .el-pre:has(code[class*="language-"]), 
+.codeblock-margin-xl .el-pre:has(pre[class*="language-"]:not(.frontmatter)){ 
+  border-top: 32px solid var(--background-primary); 
+  border-bottom: 32px solid var(--background-primary); 
+}
+
+.codeblock-margin-xxl .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-begin-bg {
   border-top: 48px solid var(--background-primary); 
 }
-.codeblock-margin-xxl .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-end-bg, 
-.codeblock-margin-xxl code[class*="language-"], 
-.codeblock-margin-xxl pre[class*="language-"]  { 
+.codeblock-margin-xxl .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-end-bg {
+  border-bottom: 48px solid var(--background-primary); 
+}
+.codeblock-margin-xxl .el-pre:has(code[class*="language-"]), 
+.codeblock-margin-xxl .el-pre:has(pre[class*="language-"]:not(.frontmatter)){ 
+  border-top: 48px solid var(--background-primary); 
   border-bottom: 48px solid var(--background-primary); 
 }
 
