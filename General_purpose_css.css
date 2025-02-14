@@ -338,7 +338,10 @@ codeblock-fit codeblock-compact
   padding-right: 2em;
 }
 /* Codeblock compact mode */
-.codeblock-compact .anp-codeblock-numbers.HyperMD-codeblock.cm-line:not(.HyperMD-codeblock-begin, .HyperMD-codeblock-end) {
+.codeblock-compact
+  .anp-codeblock-numbers.HyperMD-codeblock.cm-line:not(.HyperMD-codeblock-begin):not(
+    .HyperMD-codeblock-end
+  ) {
   padding-left: 1em;
 }
 .codeblock-compact .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-begin-bg:not(.cm-active),
@@ -360,9 +363,14 @@ codeblock-fit codeblock-compact
   height: 1rem;
 }
 
-.codeblock-compact .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-begin-bg:not(.cm-active) { border-bottom-width: 6px; }
-.codeblock-compact .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-end-bg:not(.cm-active)   { border-top-width: 6px; }
-
+.codeblock-compact
+  .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-begin-bg:not(.cm-active) {
+  border-bottom-width: 6px;
+}
+.codeblock-compact
+  .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.HyperMD-codeblock-end-bg:not(.cm-active) {
+  border-top-width: 6px;
+}
 .codeblock-compact .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line::before {
   width: 1.2em !important;
 }
