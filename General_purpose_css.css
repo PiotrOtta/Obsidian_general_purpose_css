@@ -25,17 +25,19 @@
 .image-full-height img { height: 100%; }
 
 /* Image compact */
-.image-compact img{
+.image-compact img,
+.image-compact-hover img {
   width: 200px;
   transition: 200ms ease-out;
   transition-delay: 60ms;
 }
-.image-compact img:hover{
+.image-compact-hover img:hover {
   width: revert-layer;
   z-index: 2;
 }
-.popover.hover-popover .image-compact img:hover{
-  width: 100%
+.popover.hover-popover .image-compact img:hover,
+.popover.hover-popover .image-compact-hover img:hover img:hover {
+  width: 100%;
 }
 
 /* TODO: Image ribbon */
