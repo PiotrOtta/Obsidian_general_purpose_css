@@ -201,14 +201,14 @@
 .image-radius-circle img { border-radius: 100%; }
 
 /* Border width sizes */
-.image-border-xxs img  { border: 2px solid var(--background-modifier-border); }
-.image-border-xs img   { border: 4px solid var(--background-modifier-border); }
-.image-border-sm img   { border: 8px solid var(--background-modifier-border); }
-.image-border-md img   { border: 12px solid var(--background-modifier-border); }
-.image-border-lg img   { border: 16px solid var(--background-modifier-border); }
-.image-border-xl img   { border: 20px solid var(--background-modifier-border); }
-.image-border-xxl img  { border: 24px solid var(--background-modifier-border); }
-.image-border-xxxl img { border: 32px solid var(--background-modifier-border); }
+.image-border-xxs img  { border: 2px solid var(--background-modifier-border, black); }
+.image-border-xs img   { border: 4px solid var(--background-modifier-border, black); }
+.image-border-sm img   { border: 8px solid var(--background-modifier-border, black); }
+.image-border-md img   { border: 12px solid var(--background-modifier-border, black); }
+.image-border-lg img   { border: 16px solid var(--background-modifier-border, black); }
+.image-border-xl img   { border: 20px solid var(--background-modifier-border, black); }
+.image-border-xxl img  { border: 24px solid var(--background-modifier-border, black); }
+.image-border-xxxl img { border: 32px solid var(--background-modifier-border, black); }
 /* Border custom border */
 .image-border-custom1 img  {
   border-width: 16px;
