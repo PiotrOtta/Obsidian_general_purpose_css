@@ -572,8 +572,7 @@ hr-md
 hr-lg
 hr-xl
 hr-xxl
-/* TODO: Tasklist (1) */
-task-list-item-checkbox
+/* TODO: Tasklist (0) */
 /* Title positioning */
 titles-center
 titles-right

@@ -907,10 +907,6 @@ codeblock-fit codeblock-compact
 .hr-xl hr  { margin-top: 32px; margin-bottom: 32px; }
 .hr-xxl hr { margin-top: 48px; margin-bottom: 48px; }
 
-.task-list-item-checkbox {
-  border-width: 2px;
-}
-
 #calendar-container .title {
   font-size: 18px;
 }
