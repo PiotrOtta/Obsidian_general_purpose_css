@@ -890,12 +890,12 @@ codeblock-fit codeblock-compact
 }
 
 /* Blockquote block size to fit content */
-.blockquote-fit:has(.callout),
-.blockquote-note-fit:has(.callout[data-callout="note"]),
-.blockquote-tip-fit:has(.callout[data-callout="tip"]),
-.blockquote-important-fit:has(.callout[data-callout="important"]),
-.blockquote-warning-fit:has(.callout[data-callout="warning"]),
-.blockquote-caution-fit:has(.callout[data-callout="caution"]) {
+.blockquote-fit .callout,
+.blockquote-note-fit .callout[data-callout='note'],
+.blockquote-tip-fit .callout[data-callout='tip'],
+.blockquote-important-fit .callout[data-callout='important'],
+.blockquote-warning-fit .callout[data-callout='warning'],
+.blockquote-caution-fit .callout[data-callout='caution'] {
   width: fit-content;
 }
 
