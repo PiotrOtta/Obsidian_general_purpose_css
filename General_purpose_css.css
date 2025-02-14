@@ -260,9 +260,9 @@
 .image-border-pastel-purple img { border-color: #cbaacb !important; }
 .image-border-pastel-orange img { border-color: #ffb347 !important; }
 /* Custom Hex Colors */
-.image-border-custom-color-1 { border-color: #123456 !important; }
-.image-border-custom-color-2 { border-color: #abcdef !important; }
-.image-border-custom-color-3 { border-color: #654321 !important; }
+.image-border-custom-color-1 img { border-color: #123456 !important; }
+.image-border-custom-color-2 img { border-color: #abcdef !important; }
+.image-border-custom-color-3 img { border-color: #654321 !important; }
 
 /* Experimental */
 .center-images img {
