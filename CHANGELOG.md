@@ -1,7 +1,27 @@
 # Changelog
 
-## [Unreleased]
-- Documentation website.
+
+## [1.1.0] - 2025-02-15
+
+### Added
+
+- Documentation website
+- Another Codeblock types to margin classes e.g. Bug, Summary etc.
+- New class: codeblock-margin-<size>-separate
+
+### Fixed
+
+- Codeblock fixes:
+  - compact
+  - margin
+  - fit
+  - Custom2 styling
+- Text and Title controls canceling each other
+- Build fixes
+
+### Removed 
+
+- Formatting library
 
 ## [1.0.2] - 2025-02-14
 
