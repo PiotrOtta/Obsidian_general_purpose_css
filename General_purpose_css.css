@@ -330,12 +330,8 @@ codeblock-fit codeblock-compact
   width: fit-content;
   transition: 150ms ease-out;
 }
-.codeblock-fit code[class*="language-"]:hover > code, 
-.codeblock-fit pre[class*="language-"]:hover > code,
-.codeblock-fit code[class*="language-"]:has(.copy-code-button:hover) > code, 
-.codeblock-fit pre[class*="language-"]:has(.copy-code-button:hover) > code,
-.codeblock-fit pre[class*="language-"]:has(.copy-code-button .lucide-check) > code {
-  padding-right: 2em;
+.codeblock-fit pre[class*="language-"]:hover {
+  padding-right: calc(var(--size-4-3) + 6% + 2px);
 }
 /* Codeblock compact mode */
 .codeblock-compact
