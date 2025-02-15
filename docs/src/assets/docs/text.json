@@ -6,7 +6,7 @@
       "name": "Text and Title align",
       "sections": [
         {
-          "name": "Text align",
+          "name": "Title align",
           "baseClass": "[Combo]-[Compass]",
           "controls": [
             {

@@ -65,13 +65,13 @@ cssClasses
 ---
 ```
   - Or right click the opened note tab and choose `Add file property`. Then select `cssclasses`
-2. Paste any desired class from the list of [all CSS classes](#all-css-classes) <s>or use [documentation app](https://github.com/PiotrOtta/Obsidian_general_purpose_css).</s> (WIP)
+2. Paste any desired class from the list of [all CSS classes](#all-css-classes) or use [documentation app](https://piotrotta.github.io/Obsidian_general_purpose_css/).
 
 ## Documentation
 
-Detailed documentation for the classes, including previews and usage examples, is under development and will be hosted on the GitHub page:
+Detailed documentation for the classes, including previews and usage examples, is hosted on the GitHub page:
 
-(WIP) <s>https://github.com/PiotrOtta/Obsidian_general_purpose_css  </s>
+https://piotrotta.github.io/Obsidian_general_purpose_css/
 
 ## Contribution and more
 
