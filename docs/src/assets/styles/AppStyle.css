@@ -1,0 +1,427 @@
+.mantine-AppShell-navbar {
+  border-radius: 0 0.4rem 0.4rem 0;
+  /* overflow-y: auto; */
+}
+
+.Navlink-Group-Category {
+  border-radius: 0.2rem;
+  /* overflow: hidden; */
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--mantine-color-default-border);
+}
+
+.Navlink-Group-Category .Navlink-Group-Title {
+  outline-offset: -0.125rem !important;
+}
+
+.Navlink-Group-Category .Navlink-Group-Title:hover {
+  background: var(--mantine-color-default-hover) !important;
+  color: var(--button-hover-color, var(--button-color)) !important;
+}
+.Navlink-Group-Category .Navlink-Group-Title.active {
+  background: var(--mantine-color-violet-light) !important;
+  color: var(--button-hover-color, var(--button-color)) !important;
+}
+.Navlink-Group-Category .Navlink-Group-Title.active:hover {
+  background: var(--mantine-color-violet-light-hover) !important;
+  color: var(--button-hover-color, var(--button-color)) !important;
+}
+
+.Navlink-Group-Category .Navlink-Group-Content .mantine-Accordion-content {
+  padding: 0;
+}
+
+.Home-Group-Category .Home-Group-Title {
+  letter-spacing: 0.1em;
+}
+.Tile-Clickable {
+  background: var(--mantine-color-default);
+  position: relative;
+}
+.Tile-Clickable:hover {
+  background: var(--mantine-color-default-hover) !important;
+  color: var(--button-hover-color, var(--button-color));
+  cursor: pointer;
+}
+.Tile-Clickable:focus-visible {
+  outline: 2px solid var(--mantine-primary-color-filled);
+  outline-offset: 0.125rem;
+  background: var(--mantine-color-default-hover) !important;
+  color: var(--button-hover-color, var(--button-color));
+}
+
+.Tile-Clickable .Tile-Clickable-icon {
+  position: absolute;
+  left: 0.2rem;
+  top: 0.2rem;
+  color: var(--mantine-color-default-border);
+}
+.Tile-Clickable .Tile-Clickable-icon svg {
+  width: 30px;
+  height: 30px;
+}
+.Tile-Clickable:hover .Tile-Clickable-icon {
+  color: var(--mantine-color-placeholder);
+}
+.Tile-Clickable:focus-visible .Tile-Clickable-icon {
+  color: var(--mantine-color-placeholder);
+}
+.BottomNav a.mantine-Button-root {
+  padding: 0 10px;
+  position: relative;
+  /* width: 49%; */
+  /* max-width: 400px; */
+}
+.BottomNav a.mantine-Button-root span.mantine-Button-inner {
+  justify-content: space-between !important;
+}
+
+.BottomNav .BottomNav-badge {
+  cursor: pointer;
+  /* margin-bottom: 15px; */
+  padding: 12px 6px;
+}
+.BottomNav .BottomNav-badge.BottomNav-badge-left {
+  margin-left: 10px;
+}
+.BottomNav .BottomNav-badge.BottomNav-badge-right {
+  margin-right: 10px;
+}
+
+.Docs-Block-Title h1 {
+  position: relative;
+  padding: 1.4rem;
+}
+
+.Docs-Section {
+  margin-top: 1.2rem;
+}
+.Docs-Section .Docs-Section-Title {
+  position: relative;
+  width: fit-content;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+  padding-top: 0.4rem !important;
+  padding-bottom: 0 !important;
+  border-radius: 0.4rem 0.4rem 0 0;
+  border: 0.1rem solid var(--mantine-color-default-border);
+}
+.Docs-Section .Docs-Section-Title::after {
+  content: '';
+  height: 0.3rem;
+  width: 100%;
+  background-color: var(--mantine-color-paper-1);
+  position: absolute;
+  bottom: -0.25rem;
+  left: 0;
+  z-index: 11;
+}
+
+/* Dynamic document container - left and right */
+.Docs-Section .Docs-Section-Container {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  border-top-left-radius: 0 !important;
+  border: 0.1rem solid var(--mantine-color-default-border);
+}
+.Docs-Section .Docs-Section-Container-Left {
+  /* margin-right: 1rem; */
+  position: relative;
+}
+.Docs-Section .Docs-Section-Container-Left > .Docs-Section-Preview {
+  background-color: var(--mantine-color-paper-2);
+  border-radius: 0.4rem;
+  padding: 1rem;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.Docs-Section .Docs-Section-Container-Left > .Docs-Section-Preview .el-p > p {
+  margin: 0;
+}
+
+.Docs-Section .Docs-Section-Container-Left .Docs-Section-Preview-Text {
+  position: absolute;
+  top: 0.3rem;
+  left: 2rem;
+  font-style: italic;
+  z-index: 1;
+}
+.Docs-Section .Docs-Section-Container-Left > .Docs-Section-Preview img {
+  max-width: 540px;
+}
+.Docs-Section .Docs-Section-Container-Left,
+.Docs-Section .Docs-Section-Container-Right {
+  position: sticky;
+  top: 136px;
+}
+.Docs-Section .Docs-Section-Container-Left > *,
+.Docs-Section .Docs-Section-Container-Right > * {
+  margin-bottom: 10px;
+}
+.Docs-Section .Docs-Section-Container-Left > *:last-child,
+.Docs-Section .Docs-Section-Container-Right > *:last-child {
+  margin-bottom: 0;
+}
+.Docs-Section .Docs-Section-Container-Right > *:is(h5) {
+  margin-bottom: 0;
+  width: fit-content;
+  border-left: 0.6rem solid var(--mantine-color-violet-filled);
+  display: flex;
+  margin-bottom: 0.4rem;
+}
+.Docs-Section .Docs-Section-Container-Right > *:is(h5).disabled {
+  border-left: 0.6rem solid var(--mantine-color-default-border);
+}
+
+.Dynamic-Docs-Container:has(.CopyCode-Container:not(.Pinned))
+  .Docs-Section
+  .Docs-Section-Container-Left,
+.Dynamic-Docs-Container:has(.CopyCode-Container:not(.Pinned))
+  .Docs-Section
+  .Docs-Section-Container-Right {
+  top: 74px !important;
+}
+
+.Docs-Section .Docs-Section-Container-Left {
+  flex-grow: 1;
+}
+.Docs-Section .Docs-Section-Container-Left .Controls {
+  display: flex;
+  flex-direction: row;
+}
+.Docs-Section .Docs-Section-Container-Left .Controls > * {
+  margin-right: 0.4rem;
+}
+.Docs-Section .Docs-Section-Container-Left .Controls > *:last-child {
+  margin-right: 0;
+}
+.Docs-Section .Docs-Section-Container-Left .Controls > .ToggleControl-Group button:only-child {
+  height: 100%;
+}
+.Docs-Section .Docs-Section-Container-Left div[Data-Tag='Range'] {
+  display: block;
+  width: 100%;
+}
+.Docs-Section .Docs-Section-Container-Right:has(*) {
+  width: 300px;
+  margin-left: 1rem;
+}
+
+.Docs-Section .Docs-Section-Container-Right > div:not([Data-Tag='Range']) {
+  display: flex;
+  justify-content: center;
+}
+
+.Dynamic-Docs-Container {
+  position: relative;
+}
+.ToggleControl-Group {
+  flex-wrap: wrap;
+}
+.ComboControl-Group {
+  position: relative;
+  flex-direction: column;
+}
+.ToggleControl-Group.vertical {
+  flex-direction: column;
+}
+.ToggleControl-Group.evenGrid {
+  display: grid !important;
+  grid-template-columns: auto auto auto;
+}
+.ToggleControl-Group:not(.vertical) {
+  margin-right: -0.4rem;
+}
+.ToggleControl-Group.vertical > button {
+  margin-top: 0.4rem;
+}
+.ToggleControl-Group.vertical > button:first-child {
+  margin-top: 0;
+}
+.ToggleControl-Group:not(.vertical) > button {
+  margin-right: 0.4rem;
+  margin-bottom: 0.4rem;
+  flex-grow: 1;
+}
+
+.CopyCode-Container {
+  position: sticky;
+  top: 54px;
+  z-index: 100;
+}
+
+.CopyCode-Container .CopyCode-Container-Code {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+  border: 0.1rem solid var(--mantine-color-default-border);
+}
+
+.CopyCode-Action-Container {
+  position: sticky;
+  right: 0;
+}
+.CopyCode-Action {
+  transition: 150ms ease-out background-color;
+}
+.CopyCode-Action.active {
+  background-color: var(--mantine-color-violet-filled);
+  color: var(--mantine-color-default-color);
+}
+.CopyCode-Action span {
+  animation-name: scaleUpAndRotate;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+.CopyCode-Action.active span {
+  animation-name: scaleUpAndDown;
+  animation-duration: 2100ms;
+}
+
+@keyframes scaleUpAndDown {
+  0% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes scaleUpAndRotate {
+  0% {
+    transform: scale(0) rotate(-90deg);
+  }
+  50% {
+    transform: scale(1) rotate(0deg);
+  }
+  60% {
+    transform: scale(1) rotate(20deg);
+  }
+  70% {
+    transform: scale(1) rotate(-20deg);
+  }
+  80% {
+    transform: scale(1) rotate(10deg);
+  }
+  90% {
+    transform: scale(1) rotate(-10deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.CopyCode-Container .CopyCode-Button-StickToTop {
+  position: absolute;
+  right: 0;
+  visibility: none;
+  opacity: 0;
+  transition: 100ms ease-out opacity;
+  transition-delay: 500ms;
+}
+.CopyCode-Container:has(.CopyCode-Container-Code:hover) .CopyCode-Button-StickToTop,
+.CopyCode-Container:focus-within .CopyCode-Button-StickToTop,
+.CopyCode-Container .CopyCode-Button-StickToTop:hover,
+.CopyCode-Container .CopyCode-Button-StickToTop:focus-visible {
+  transition-delay: 0ms;
+  visibility: visible;
+  opacity: 1;
+}
+
+.Colors-Control .Colors-Control-Button {
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--mantine-color-default-border);
+}
+.Colors-Control .Colors-Control-Button:hover {
+  filter: invert(0.15);
+}
+
+.Colors-Control .Colors-Control-Button.active {
+  outline: 2px solid var(--mantine-primary-color-filled);
+  outline-style: solid;
+  outline-offset: calc(0.125rem * var(--mantine-scale));
+}
+.Colors-Control .Colors-Control-Button.active:focus-visible {
+  outline-width: 4px;
+}
+
+.Compass-Container {
+  display: flex;
+  margin-top: 0.4rem;
+}
+
+.Segment-Control label {
+  outline-offset: calc(0.185rem * var(--mantine-scale));
+}
+
+.mantine-Combobox-option {
+  position: relative;
+}
+.mantine-Combobox-option[Data-Combobox-Selected="true"]::after {
+  content: '›';
+  rotate: 90deg;
+  position: absolute;
+  font-size: 20px;
+  right: 1rem;
+  bottom: 0;
+}
+.mantine-Combobox-option[Data-Combobox-Selected="true"]:last-child:after {
+  content: '';
+}
+.Docs-Section .Docs-Section-Container-Left .Controls .ComboControl-Group {
+  width: 172px;
+}
+.Docs-Section .Docs-Section-Container-Left .Controls .mantine-Popover-dropdown {
+  top: -220px !important;
+}
+
+@media only screen and (max-width: 1200px) {
+  .Docs-Section .Docs-Section-Container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .Docs-Section .Docs-Section-Container-Left,
+  .Docs-Section .Docs-Section-Container-Right {
+    position: relative;
+    top: auto;
+  }
+  .Docs-Section .Docs-Section-Container-Left {
+    max-height: 497px;
+    overflow-y: auto;
+  }
+  .Docs-Section .Docs-Section-Container-Right {
+    margin-left: 0;
+    margin-top: 1rem;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .BottomNav .BottomNav-badge.BottomNav-badge-left,
+  .BottomNav .BottomNav-badge.BottomNav-badge-right {
+    display: none;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .mantine-AppShell-header h4 {
+    display: none;
+  }
+}

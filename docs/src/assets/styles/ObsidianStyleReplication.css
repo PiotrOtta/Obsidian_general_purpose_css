@@ -1,0 +1,237 @@
+/* Obsidian style replication for preview use only. */
+.markdown-rendered {
+  --color-red-rgb: 251, 70, 76;
+  --color-red: #fb464c;
+  --color-orange-rgb: 233, 151, 63;
+  --color-orange: #e9973f;
+  --color-yellow-rgb: 224, 222, 113;
+  --color-yellow: #e0de71;
+  --color-green-rgb: 68, 207, 110;
+  --color-green: #44cf6e;
+  --color-cyan-rgb: 83, 223, 221;
+  --color-cyan: #53dfdd;
+  --color-blue-rgb: 2, 122, 255;
+  --color-blue: #027aff;
+  --color-purple-rgb: 168, 130, 255;
+  --color-purple: #a882ff;
+  --color-pink-rgb: 250, 153, 205;
+  --color-pink: #fa99cd;
+
+  --code-background: #2d2d2d;
+  --size-4-1: 4px;
+  --size-4-3: 12px;
+  --size-4-4: 16px;
+  --size-4-6: 24px;
+  --line-height-normal: 1.5;
+  --line-height-tight: 1.3;
+  --code-radius: 4px;
+  --radius-s: 4px;
+  --button-radius: var(--radius-s);
+  --highlight-mix-blend-mode: lighten;
+  --code-white-space: pre-wrap;
+  --code-normal: #9e9e9e;
+  --text-color: white;
+  --interactive-hover: #242424;
+  --background-primary: var(--mantine-color-paper-2);
+  --p-spacing: 1rem;
+
+  --callout-border-opacity: 0.25;
+  --callout-border-width: 0px;
+  --callout-radius: var(--radius-s);
+  --callout-blend-mode: var(--highlight-mix-blend-mode);
+  --callout-title-color: inherit;
+  --callout-title-padding: 0;
+  --callout-title-size: inherit;
+  --callout-content-padding: 0;
+  --callout-content-background: transparent;
+  --callout-padding: var(--size-4-3) var(--size-4-3) var(--size-4-3) var(--size-4-6);
+
+  --callout-bug: var(--color-red-rgb);
+  --callout-default: var(--color-blue-rgb);
+  --callout-error: var(--color-red-rgb);
+  --callout-example: var(--color-purple-rgb);
+  --callout-fail: var(--color-red-rgb);
+  --callout-important: var(--color-cyan-rgb);
+  --callout-info: var(--color-blue-rgb);
+  --callout-question: var(--color-orange-rgb);
+  --callout-success: var(--color-green-rgb);
+  --callout-summary: var(--color-cyan-rgb);
+  --callout-tip: var(--color-cyan-rgb);
+  --callout-todo: var(--color-blue-rgb);
+  --callout-warning: var(--color-orange-rgb);
+}
+
+/* CODEBLOCK */
+.markdown-rendered p {
+  margin-block-start: var(--p-spacing);
+  margin-block-end: var(--p-spacing);
+}
+.markdown-rendered button {
+  -webkit-app-region: no-drag;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  font-size: 16px;
+  height: calc(16px * 2.25);
+  border-radius: var(--button-radius);
+  border: 0;
+  padding: var(--size-4-3) var(--size-4-3);
+  font-family: inherit;
+  outline: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.markdown-rendered code,
+.markdown-rendered pre {
+  color: var(--code-normal);
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: normal;
+  direction: ltr;
+  text-align: left;
+  word-spacing: normal;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+.markdown-rendered pre {
+  position: relative;
+  padding: var(--size-4-3) var(--size-4-4);
+  min-height: 38px;
+  background: var(--code-background);
+  border-radius: var(--code-radius);
+  white-space: var(--code-white-space);
+  overflow-x: auto;
+}
+.markdown-rendered pre code {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+.markdown-rendered pre:not(:hover) > button.copy-code-button {
+  display: none;
+}
+.markdown-rendered button.copy-code-button {
+  margin: 6px;
+  padding: 6px 8px;
+  height: auto;
+  background-color: transparent;
+  box-shadow: none;
+  color: var(--text-muted);
+  font-size: var(--font-ui-smaller);
+  font-family: var(--font-interface);
+  position: absolute;
+  top: 0;
+  inset-inline-end: 0;
+  cursor: not-allowed;
+}
+
+.markdown-rendered button:hover {
+  background-color: var(--interactive-hover);
+}
+
+/* CALLOUT */
+.markdown-rendered .callout {
+  --callout-color: var(--callout-default);
+}
+.markdown-rendered .callout[data-callout='abstract'],
+.markdown-rendered .callout[data-callout='summary'],
+.markdown-rendered .callout[data-callout='tldr'] {
+  --callout-color: var(--callout-summary);
+}
+.markdown-rendered .callout[data-callout='info'] {
+  --callout-color: var(--callout-info);
+}
+.markdown-rendered .callout[data-callout='todo'] {
+  --callout-color: var(--callout-todo);
+}
+.markdown-rendered .callout[data-callout='important'] {
+  --callout-color: var(--callout-important);
+}
+.markdown-rendered .callout[data-callout='tip'],
+.markdown-rendered .callout[data-callout='hint'] {
+  --callout-color: var(--callout-tip);
+}
+.markdown-rendered .callout[data-callout='success'],
+.markdown-rendered .callout[data-callout='check'],
+.markdown-rendered .callout[data-callout='done'] {
+  --callout-color: var(--callout-success);
+}
+.markdown-rendered .callout[data-callout='question'],
+.markdown-rendered .callout[data-callout='help'],
+.markdown-rendered .callout[data-callout='faq'] {
+  --callout-color: var(--callout-question);
+}
+.markdown-rendered .callout[data-callout='warning'],
+.markdown-rendered .callout[data-callout='caution'],
+.markdown-rendered .callout[data-callout='attention'] {
+  --callout-color: var(--callout-warning);
+}
+.markdown-rendered .callout[data-callout='failure'],
+.markdown-rendered .callout[data-callout='fail'],
+.markdown-rendered .callout[data-callout='missing'] {
+  --callout-color: var(--callout-fail);
+}
+.markdown-rendered .callout[data-callout='danger'],
+.markdown-rendered .callout[data-callout='error'] {
+  --callout-color: var(--callout-error);
+}
+.markdown-rendered .callout[data-callout='bug'] {
+  --callout-color: var(--callout-bug);
+}
+.markdown-rendered .callout[data-callout='example'] {
+  --callout-color: var(--callout-example);
+}
+.markdown-rendered .callout[data-callout='quote'],
+.markdown-rendered .callout[data-callout='cite'] {
+  --callout-color: var(--callout-quote);
+}
+
+.markdown-rendered .callout {
+  overflow: hidden;
+  border-style: solid;
+  border-color: rgba(var(--callout-color), var(--callout-border-opacity));
+  border-width: var(--callout-border-width);
+  border-radius: var(--callout-radius);
+  margin: 1em 0;
+  mix-blend-mode: var(--callout-blend-mode);
+  background-color: rgba(var(--callout-color), 0.1);
+  padding: var(--callout-padding);
+}
+.markdown-rendered .callout.is-collapsible .callout-title {
+  cursor: var(--cursor);
+}
+.markdown-rendered .callout-title {
+  padding: var(--callout-title-padding);
+  display: flex;
+  gap: var(--size-4-1);
+  color: rgb(var(--callout-color));
+  line-height: var(--line-height-tight);
+  align-items: flex-start;
+}
+.markdown-rendered .callout-content {
+  overflow-x: auto;
+  padding: var(--callout-content-padding);
+  background-color: var(--callout-content-background);
+}
+
+.markdown-rendered .callout-content .callout {
+  margin-top: 20px;
+}
+.markdown-rendered .callout-icon {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+.markdown-rendered .callout-icon .svg-icon {
+  color: rgb(var(--callout-color));
+}
+.markdown-rendered .callout-icon::after {
+  content: '\200B';
+}
+.markdown-rendered .callout-title-inner {
+  color: var(--callout-title-color);
+}

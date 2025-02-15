@@ -1,0 +1,17 @@
+.title {
+  font-size: rem(80px);
+  font-weight: 900;
+  letter-spacing: rem(-2px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    font-size: rem(50px);
+  }
+}
+
+.subTitle {
+  font-size: rem(50px);
+  letter-spacing: 1rem;
+  @media (max-width: $mantine-breakpoint-md) {
+    font-size: rem(30px);
+  }
+}

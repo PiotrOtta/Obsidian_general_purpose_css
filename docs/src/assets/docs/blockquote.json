@@ -1,0 +1,306 @@
+{
+  "name": "blockquote",
+  "tag": "Blockquote",
+  "sections": [
+    {
+      "name": "Size",
+      "sections": [
+        {
+          "name": "Compact",
+          "description": "If using keyboard, use down arrow to open combobox.",
+          "controls": [
+            {
+              "name": "Combo",
+              "renderOnLeft": false,
+              "data": {
+                "blockquote-compact": "ALL",
+                "blockquote-note-compact": "✏️ Note",
+                "blockquote-tip-compact": "🔥 Tip",
+                "blockquote-important-compact": "🔥 Important",
+                "blockquote-warning-compact": "⚠️ Warning",
+                "blockquote-caution-compact": "⚠️ Caution",
+                "blockquote-bug-compact": "👾 Bug",
+                "blockquote-abstract-compact": "📋 Abstract",
+                "blockquote-summary-compact": "📋 Summary",
+                "blockquote-tldr-compact": "📋 Tldr",
+                "blockquote-info-compact": "ℹ️ Info",
+                "blockquote-todo-compact": "✔️ Todo"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Fit",
+          "baseClass": "blockquote-[Combo]-fit",
+          "controls": [
+            {
+              "name": "Combo",
+              "renderOnLeft": false,
+              "data": {
+                "-": "ALL",
+                "note": "✏️ Note",
+                "tip": "🔥 Tip",
+                "important": "🔥 Important",
+                "warning": "⚠️ Warning",
+                "caution": "⚠️ Caution",
+                "bug": "👾 Bug",
+                "abstract": "📋 Abstract",
+                "summary": "📋 Summary",
+                "tldr": "📋 Tldr",
+                "info": "ℹ️ Info",
+                "todo": "✔️ Todo"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Border and other",
+      "description": "Border width, style, blockquote background etc.",
+      "sections": [
+        {
+          "name": "Width",
+          "description": "Slider values can be applied to all classes of the blockquote. You can mix different sizes across different blockquote types.",
+          "baseClass": "blockquote-[Combo]-border-[Range]",
+          "range": ["none", "xs", "sm", "md", "lg", "xl", "xxl", "xxxl"],
+          "controls": [
+            {
+              "name": "Combo",
+              "renderOnLeft": false,
+              "data": {
+                "-": "ALL",
+                "note": "✏️ Note",
+                "tip": "🔥 Tip",
+                "important": "🔥 Important",
+                "warning": "⚠️ Warning",
+                "caution": "⚠️ Caution",
+                "bug": "👾 Bug",
+                "abstract": "📋 Abstract",
+                "summary": "📋 Summary",
+                "tldr": "📋 Tldr",
+                "info": "ℹ️ Info",
+                "todo": "✔️ Todo"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Border style",
+          "description": "Same as above, slider values can be mixed. This class needs \"Width\" to be set, otherwise it will not do anything.",
+          "baseClass": "blockquote-[Combo]-border-[Range]",
+          "range": ["dashed", "dotted", "double"],
+          "controls": [
+            {
+              "name": "Combo",
+              "renderOnLeft": false,
+              "data": {
+                "-": "ALL",
+                "note": "✏️ Note",
+                "tip": "🔥 Tip",
+                "important": "🔥 Important",
+                "warning": "⚠️ Warning",
+                "caution": "⚠️ Caution",
+                "bug": "👾 Bug",
+                "abstract": "📋 Abstract",
+                "summary": "📋 Summary",
+                "tldr": "📋 Tldr",
+                "info": "ℹ️ Info",
+                "todo": "✔️ Todo"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Bordered side",
+          "baseClass": "blockquote-[Combo]-border-[Compass]",
+          "controls": [
+            {
+              "name": "Combo",
+              "renderOnLeft": false,
+              "data": {
+                "-": "ALL",
+                "note": "✏️ Note",
+                "tip": "🔥 Tip",
+                "important": "🔥 Important",
+                "warning": "⚠️ Warning",
+                "caution": "⚠️ Caution",
+                "bug": "👾 Bug",
+                "abstract": "📋 Abstract",
+                "summary": "📋 Summary",
+                "tldr": "📋 Tldr",
+                "info": "ℹ️ Info",
+                "todo": "✔️ Todo"
+              }
+            },
+            {
+              "name": "Compass",
+              "disable": ["top-left", "top-right", "bottom-left", "bottom-right"]
+            }
+          ]
+        },
+        {
+          "name": "Border radius",
+          "baseClass": "blockquote-[Combo]-radius-[Range]",
+          "range": ["none", "xs", "sm", "md", "lg", "xl", "xxl", "circle"],
+          "controls": [
+            {
+              "name": "Combo",
+              "renderOnLeft": false,
+              "data": {
+                "-": "ALL",
+                "note": "✏️ Note",
+                "tip": "🔥 Tip",
+                "important": "🔥 Important",
+                "warning": "⚠️ Warning",
+                "caution": "⚠️ Caution",
+                "bug": "👾 Bug",
+                "abstract": "📋 Abstract",
+                "summary": "📋 Summary",
+                "tldr": "📋 Tldr",
+                "info": "ℹ️ Info",
+                "todo": "✔️ Todo"
+              }
+            }
+          ]
+        },
+        {
+          "name": "No background",
+          "baseClass": "blockquote-[Combo]-background-none",
+          "controls": [
+            {
+              "name": "Combo",
+              "renderOnLeft": false,
+              "data": {
+                "-": "ALL",
+                "note": "✏️ Note",
+                "tip": "🔥 Tip",
+                "important": "🔥 Important",
+                "warning": "⚠️ Warning",
+                "caution": "⚠️ Caution",
+                "bug": "👾 Bug",
+                "abstract": "📋 Abstract",
+                "summary": "📋 Summary",
+                "tldr": "📋 Tldr",
+                "info": "ℹ️ Info",
+                "todo": "✔️ Todo"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "baseClass": "blockquote-[Combo]-[Colors]",
+          "controls": [
+            {
+              "name": "Combo",
+              "renderOnLeft": false,
+              "data": {
+                "-": "ALL",
+                "note": "✏️ Note",
+                "tip": "🔥 Tip",
+                "important": "🔥 Important",
+                "warning": "⚠️ Warning",
+                "caution": "⚠️ Caution",
+                "bug": "👾 Bug",
+                "abstract": "📋 Abstract",
+                "summary": "📋 Summary",
+                "tldr": "📋 Tldr",
+                "info": "ℹ️ Info",
+                "todo": "✔️ Todo"
+              }
+            },
+            {
+              "name": "Colors",
+              "data": {
+                "red": "#FF0000",
+                "blue": "#0000FF",
+                "orange": "#FFA500",
+                "yellow": "#FFFF00",
+                "green": "#008000",
+                "cyan": "#00FFFF",
+                "purple": "#800080",
+                "pink": "#FFC0CB"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Custom styles",
+      "baseClass": "blockquote-[Combo]-[Range]",
+      "keepValuesAfterClear": true,
+      "controls": [
+        {
+          "name": "Range",
+          "renderOnLeft": true,
+          "description": "Custom2 is a shine animation and it will show itself after a second or so.",
+          "range": ["custom1", "custom2"]
+        },
+        {
+          "name": "Combo",
+          "renderOnLeft": true,
+          "data": {
+            "-": "ALL",
+            "note": "✏️ Note",
+            "tip": "🔥 Tip",
+            "important": "🔥 Important",
+            "warning": "⚠️ Warning",
+            "caution": "⚠️ Caution",
+            "bug": "👾 Bug",
+            "abstract": "📋 Abstract",
+            "summary": "📋 Summary",
+            "tldr": "📋 Tldr",
+            "info": "ℹ️ Info",
+            "todo": "✔️ Todo"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Text align",
+      "sections": [
+        {
+          "name": "Align",
+          "description": "Align all content (text) or title and text separately.",
+          "baseClass": "blockquote-[Combo]-[Range]-[Compass]",
+          "keepValuesAfterClear": true,
+          "range": ["content", "title", "text"],
+          "controls": [
+            {
+              "name": "Combo",
+              "renderOnLeft": false,
+              "data": {
+                "-": "ALL",
+                "note": "✏️ Note",
+                "tip": "🔥 Tip",
+                "important": "🔥 Important",
+                "warning": "⚠️ Warning",
+                "caution": "⚠️ Caution",
+                "bug": "👾 Bug",
+                "abstract": "📋 Abstract",
+                "summary": "📋 Summary",
+                "tldr": "📋 Tldr",
+                "info": "ℹ️ Info",
+                "todo": "✔️ Todo"
+              }
+            },
+            {
+              "name": "Compass",
+              "disable": [
+                "top-left",
+                "top",
+                "top-right",
+                "left",
+                "bottom-left",
+                "bottom",
+                "bottom-right"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

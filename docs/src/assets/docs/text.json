@@ -1,0 +1,64 @@
+{
+  "name": "Text",
+  "tag": "Text",
+  "sections": [
+    {
+      "name": "Text and Title align",
+      "sections": [
+        {
+          "name": "Text align",
+          "baseClass": "[Combo]-[Compass]",
+          "controls": [
+            {
+              "name": "Combo",
+              "data": {
+                "titles": "All titles",
+                "h1": "h1",
+                "h2": "h2",
+                "h3": "h3",
+                "h4": "h4",
+                "h5": "h5",
+                "h6": "h6"
+              }
+            },
+            {
+              "name": "Compass",
+              "disable": [
+                "top-left",
+                "top",
+                "top-right",
+                "left",
+                "bottom-left",
+                "bottom",
+                "bottom-right"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Text align",
+          "baseClass": "text-[Compass]",
+          "controls": [
+            {
+              "name": "Compass",
+              "disable": [
+                "top-left",
+                "top",
+                "top-right",
+                "left",
+                "bottom-left",
+                "bottom",
+                "bottom-right"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Separator margin",
+          "baseClass": "hr-[Range]",
+          "range": ["xs", "sm", "md", "lg", "xl", "xxl"]
+        }
+      ]
+    }
+  ]
+}

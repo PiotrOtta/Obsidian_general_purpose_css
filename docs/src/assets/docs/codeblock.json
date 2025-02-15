@@ -1,0 +1,56 @@
+{
+  "name": "codeblock",
+  "tag": "Codeblock",
+  "sections": [
+    {
+      "name": "Size",
+      "sections": [
+        {
+          "name": "Fit",
+          "description": "Fit only works in preview mode",
+          "controls": [
+            {
+              "name": "Toggle",
+              "vertical": true,
+              "singleValueOnly": false,
+              "data": {
+                "codeblock-fit": "Fit (with hover)"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Compact",
+          "controls": [
+            {
+              "name": "Toggle",
+              "vertical": true,
+              "singleValueOnly": false,
+              "data": {
+                "codeblock-compact": "Compact"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Margin",
+      "description": "Bottom and top margins",
+      "baseClass": "codeblock-margin-[Range]-[Toggle]",
+      "keepValuesAfterClear": true,
+      "range": ["xs", "sm", "md", "lg", "xl", "xxl"],
+      "controls": [
+        {
+          "name": "Toggle",
+          "singleValueOnly": true,
+          "renderOnLeft": true,
+          "default": "-",
+          "data": {
+            "separate": "Remove margin between codeblocks"
+          }
+        }
+      ]
+    }
+  ]
+}
