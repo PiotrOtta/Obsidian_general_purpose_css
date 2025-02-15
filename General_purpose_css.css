@@ -349,7 +349,7 @@ codeblock-fit codeblock-compact
 }
 .codeblock-compact code[class*="language-"], 
 .codeblock-compact pre[class*="language-"] {
-  padding: 2px;
+  padding: 2px 4px;
   min-height: fit-content;
 }
 .codeblock-compact code[class*="language-"] .copy-code-button, 
