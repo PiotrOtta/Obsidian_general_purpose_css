@@ -4,7 +4,7 @@
   "type": "module",
   "author": "Piotr Otta",
   "version": "1.0.0",
-  "homepage": ".",
+  "homepage": "https://piotrotta.github.io/Obsidian_general_purpose_css/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
