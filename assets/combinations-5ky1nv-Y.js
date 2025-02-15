@@ -1,0 +1,1 @@
+const n="Combinations",s="Combinations",o=[{name:"Work in progress",description:"This section, styling and classes will be done in the future."}],t={name:n,tag:s,sections:o};export{t as default,n as name,o as sections,s as tag};

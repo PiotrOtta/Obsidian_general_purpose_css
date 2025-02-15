@@ -1,0 +1,1 @@
+const s="Tasklist",t="Tasklist",n=[{name:"Work in progress",description:"This section, styling and classes will be done in the future."}],e={name:s,tag:t,sections:n};export{e as default,s as name,n as sections,t as tag};

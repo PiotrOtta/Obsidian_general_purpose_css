@@ -1,0 +1,1 @@
+const s="Miscellaneous",e="Misc",n=[{name:"Work in progress",description:"This section, styling and classes will be done in the future."}],t={name:s,tag:e,sections:n};export{t as default,s as name,n as sections,e as tag};
