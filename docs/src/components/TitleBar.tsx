@@ -14,12 +14,12 @@ export default function TitleBar() {
           pb={10}
           style={{ height: '100%' }}
           src={GPCSSLogo}
-          alt="General Purpouse CSS Classes logo - link to github repo"
-          title="General Purpouse CSS Classes logo - link to github repo"
+          alt="General Purpose CSS Classes logo - link to github repo"
+          title="General Purpose CSS Classes logo - link to github repo"
         />
       </Anchor>
       <Title c="violet" order={4}>
-        General Purpouse CSS
+        General Purpose CSS
       </Title>
       <Title order={5} pl={10} visibleFrom="sm">
         Documentation

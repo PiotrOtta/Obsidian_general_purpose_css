@@ -37,7 +37,7 @@ export default function DefaultLayout() {
       foundRoute = routes[0].children.find((el) => el.path === location.pathname);
     }
     const _title = foundRoute?.title || foundRoute?.pathName;
-    if (_title) document.title = _title === 'Home' ? 'General Purpouse CSS Documentation' : _title;
+    if (_title) document.title = _title === 'Home' ? 'General Purpose CSS Documentation' : _title;
   }, [location]);
 
   useEffect(() => {

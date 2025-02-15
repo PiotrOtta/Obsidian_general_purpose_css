@@ -126,7 +126,7 @@ const routes: Array<ICustomRoute & RouteObject> = [
       },
       {
         path: '/about',
-        pathName: 'About General Purpouse CSS',
+        pathName: 'About General Purpose CSS',
         element: <AboutPage />,
         icon: <IconInfoCircle />,
       },
@@ -162,7 +162,9 @@ const routes: Array<ICustomRoute & RouteObject> = [
   },
 ];
 
-const router = createBrowserRouter(routes);
+const router = createBrowserRouter(routes, {
+  basename: '/Obsidian_general_purpose_css/',
+});
 
 export function Router() {
   return <RouterProvider router={router} />;

@@ -13,8 +13,8 @@ export function AboutPage() {
         p={6}
         w={160}
         src={GPCSSLogo}
-        alt="General Purpouse CSS Classes logo"
-        title="General Purpouse CSS Classes logo"
+        alt="General Purpose CSS Classes logo"
+        title="General Purpose CSS Classes logo"
       />
       <Welcome onlyTitle />
       <Container mt={30} ta="center" className="AboutPage-Container">

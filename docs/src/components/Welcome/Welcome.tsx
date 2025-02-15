@@ -13,7 +13,7 @@ export function Welcome({ onlyTitle = false }: { onlyTitle?: boolean }) {
         Welcome to
       </Title>
       <Title className={`${classes.title}`} ta="center" c="violet">
-        General Purpouse CSS
+        General Purpose CSS
       </Title>
       <Title
         c="navbar.9"
