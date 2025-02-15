@@ -3,6 +3,10 @@
   /* overflow-y: auto; */
 }
 
+.Navbar-Container .mantine-ScrollArea-viewport {
+  padding: 2px;
+}
+
 .Navlink-Group-Category {
   border-radius: 0.2rem;
   /* overflow: hidden; */

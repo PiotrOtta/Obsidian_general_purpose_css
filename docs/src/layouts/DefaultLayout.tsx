@@ -59,10 +59,10 @@ export default function DefaultLayout() {
         leftSection={route.icon}
         variant="light"
         autoContrast
-        m={4}
         mb={mb}
         ml={0}
         mr={0}
+        mt={0}
         style={{ borderRadius: '0.2rem', width: 'auto', outlineOffset: '0' }}
         childrenOffset={36}
       >
@@ -156,7 +156,7 @@ export default function DefaultLayout() {
       </AppShell.Header>
 
       <AppShell.Navbar bg="navbar.1" pt={0} pb={0} pr={14} pl={14}>
-        <AppShell.Section grow my="md" component={ScrollArea}>
+        <AppShell.Section grow my="md" component={ScrollArea} className="Navbar-Container">
           {renderNavbar(routes)}
         </AppShell.Section>
       </AppShell.Navbar>
