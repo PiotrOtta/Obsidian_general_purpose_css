@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import CopyCode from '@components/CopyCode';
+import { useCode } from '@components/Wrappers/CodeProvider';
 import { IconExclamationCircle } from '@tabler/icons-react';
 import { IDocsJson } from '@utils/interfaces';
 import { useOutletContext } from 'react-router-dom';
@@ -16,17 +17,14 @@ export default function DynamicDocsDocument() {
   const [docsJson, setDocsJson] = useState<IDocsJson | undefined>();
   const [error, setError] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
-  const [code, setCode] = useState<{ [sectionName: string]: string }>({});
+
+  const { setCode } = useCode();
 
   function resetState() {
     setCode({});
     setError(false);
     setLoading(true);
     setDocsJson(undefined);
-  }
-
-  function handleSetCode(classObj: { [sectionName: string]: string }) {
-    setCode({ ...code, ...classObj });
   }
 
   useEffect(() => {
@@ -62,15 +60,7 @@ export default function DynamicDocsDocument() {
     return (
       <>
         {docsJson?.sections?.map((data, key) => {
-          return (
-            <DocsSection
-              data={data}
-              k={key}
-              tagType={docsJson.tag}
-              key={key}
-              setCode={handleSetCode}
-            />
-          );
+          return <DocsSection data={data} k={key} tagType={docsJson.tag} key={key} />;
         })}
       </>
     );
@@ -79,7 +69,7 @@ export default function DynamicDocsDocument() {
   return (
     <>
       <Container className="Dynamic-Docs-Container">
-        <CopyCode classCodes={code} />
+        <CopyCode />
         <div
           style={
             loading || error ? { display: 'flex', justifyContent: 'center', minHeight: '100%' } : {}

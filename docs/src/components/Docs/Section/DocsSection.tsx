@@ -11,6 +11,7 @@ import { RangeControl } from '@/components/Controls/RangeControl';
 import { SegmentControl } from '@/components/Controls/SegmentControl';
 import { ToggleControl } from '@/components/Controls/ToggleControl';
 import { ICustomDocsRoute } from '@/Router';
+import { useCode } from '../../Wrappers/CodeProvider';
 import DocsSpecificTags from './DocsSpecificTags';
 
 const controlComponents = {
@@ -25,12 +26,12 @@ const controlComponents = {
 interface DocsSectionProps {
   data: IDocsSection;
   k: number | string;
-  setCode: (o: { [sectionName: string]: string }) => void;
   tagType?: TTagTypes | undefined;
 }
 let _localSavedObj: { [controlName: string]: string | Array<string> } = {};
 
-const DocsSection: FunctionComponent<DocsSectionProps> = ({ data, setCode, k, tagType }) => {
+const DocsSection: FunctionComponent<DocsSectionProps> = ({ data, k, tagType }) => {
+  const { setCode } = useCode();
   const { route } = useOutletContext<{ route?: ICustomDocsRoute }>();
   const [dictionaryClasses, setDictionaryClasses] = useState<{
     [controlName: string]: string;
@@ -314,4 +315,4 @@ const DocsSection: FunctionComponent<DocsSectionProps> = ({ data, setCode, k, ta
   );
 };
 
-export default DocsSection;
+export default React.memo(DocsSection);

@@ -1,13 +1,11 @@
 import { useEffect, useState } from 'react';
+import { useCode } from '@components/Wrappers/CodeProvider';
 import { IconCheck, IconCopy, IconPin, IconPinnedOff } from '@tabler/icons-react';
 import { ActionIcon, Button, Code, Container } from '@mantine/core';
 import { useClipboard } from '@mantine/hooks';
 
-export default function CopyCode({
-  classCodes,
-}: {
-  classCodes: { [sectionName: string]: string };
-}) {
+export default function CopyCode() {
+  const { code: classCodes } = useCode();
   const [code, setCode] = useState('');
   const [keepOnTop, setKeepOnTop] = useState(true);
   const clipboard = useClipboard({ timeout: 2100 });
@@ -17,6 +15,7 @@ export default function CopyCode({
   }
 
   useEffect(() => {
+    if (!classCodes) return;
     const allClasses = Object.values(classCodes)
       ?.map((el) => el)
       ?.filter((el) => el);

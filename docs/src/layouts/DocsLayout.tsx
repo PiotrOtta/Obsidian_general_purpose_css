@@ -2,9 +2,10 @@ import '@mantine/core/styles.css';
 
 import { useState } from 'react';
 import BottomNavigation from '@components/Docs/BottomNavigation';
+import { CodeProvider } from '@components/Wrappers/CodeProvider';
 import { Outlet } from 'react-router-dom';
 import { Container, Title } from '@mantine/core';
-import { ICustomDocsRoute } from '../Router';
+import { ICustomDocsRoute } from '@/Router';
 
 /**
  * Default docs layout. It can be used both as a wrapping and dynamic layout.
@@ -36,11 +37,13 @@ export default function DocsLayout() {
     >
       <div>
         {renderDocTitleBlock()}
-        <Outlet
-          context={{
-            route: currRoute,
-          }}
-        />
+        <CodeProvider>
+          <Outlet
+            context={{
+              route: currRoute,
+            }}
+          />
+        </CodeProvider>
       </div>
       <BottomNavigation currRouteInject={setCurrRoute} />
     </div>
