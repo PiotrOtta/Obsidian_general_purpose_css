@@ -1,6 +1,22 @@
 # Changelog
 
 
+## [1.1.1] - 2025-03-27
+**Docs changes only**
+
+### Added
+
+- Lazy loading for docs routes
+
+### Refactored
+
+- Optimized docs components
+- Code related functions and added code provider
+
+### Removed
+
+- Few commented blocks of code
+
 ## [1.1.0] - 2025-02-15
 
 ### Added

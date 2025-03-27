@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "author": "Piotr Otta",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "homepage": "https://piotrotta.github.io/Obsidian_general_purpose_css/",
   "scripts": {
     "dev": "vite",
