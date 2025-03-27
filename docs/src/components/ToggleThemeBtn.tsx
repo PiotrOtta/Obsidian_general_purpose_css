@@ -15,7 +15,6 @@ export default function ToggleThemeBtn() {
       onClick={toggleTheme}
     >
       {isDarkTheme ? <IconBrightnessUpFilled size={30} /> : <IconMoonFilled size={30} />}
-      {/* {isDarkTheme ? <IconBrightnessUpFilled size={30} /> : <IconMoonFilled size={30} />} */}
     </ActionIcon>
   );
 }
