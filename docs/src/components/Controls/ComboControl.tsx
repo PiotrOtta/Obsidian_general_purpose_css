@@ -27,8 +27,6 @@ export function ComboControl({
   signalClear?: boolean;
   customPlaceholder?: string;
 }) {
-  if (!data || !Object.keys(data).length) return null;
-
   const [selectedValues, setSelectedValues] = useState<Array<string>>([]);
   const combobox = useCombobox({
     onDropdownClose: () => combobox.resetSelectedOption(),
@@ -52,6 +50,7 @@ export function ComboControl({
     });
 
   const values = selectedValues.map((el) => {
+    if (!data) return null;
     const title = Object.entries(data).find((entry) => entry[0] === el)?.[1];
     return (
       <Pill key={title} withRemoveButton onRemove={() => handleValueRemove(el)}>
@@ -60,28 +59,30 @@ export function ComboControl({
     );
   });
 
-  const options = Object.entries(data).map((el) => {
-    const className = el[0];
-    const title = el[1];
-    return (
-      <Combobox.Option
-        value={className}
-        key={className}
-        active={selectedValues.includes(className)}
-        disabled={
-          (maxValuesCount &&
-            selectedValues.length >= maxValuesCount &&
-            !selectedValues.includes(className)) ||
-          false
-        }
-      >
-        <Group gap="sm">
-          {selectedValues.includes(className) ? <CheckIcon size={12} /> : null}
-          <span>{title}</span>
-        </Group>
-      </Combobox.Option>
-    );
-  });
+  const options =
+    data &&
+    Object.entries(data).map((el) => {
+      const className = el[0];
+      const title = el[1];
+      return (
+        <Combobox.Option
+          value={className}
+          key={className}
+          active={selectedValues.includes(className)}
+          disabled={
+            (maxValuesCount &&
+              selectedValues.length >= maxValuesCount &&
+              !selectedValues.includes(className)) ||
+            false
+          }
+        >
+          <Group gap="sm">
+            {selectedValues.includes(className) ? <CheckIcon size={12} /> : null}
+            <span>{title}</span>
+          </Group>
+        </Combobox.Option>
+      );
+    });
 
   function handleClear() {
     setClassCode?.('');
@@ -100,6 +101,7 @@ export function ComboControl({
     }
   }, [signalClear]);
 
+  if (!data || !Object.keys(data).length) return null;
   return (
     <div className="ComboControl-Group" data-tag="Combo">
       <Combobox
@@ -160,7 +162,7 @@ export function ComboControl({
           )}
           <Combobox.Options>
             <ScrollArea.Autosize mah={200} type="hover">
-              {options.length === 0 ? <Combobox.Empty>Nothing found</Combobox.Empty> : options}
+              {options?.length === 0 ? <Combobox.Empty>Nothing found</Combobox.Empty> : options}
             </ScrollArea.Autosize>
           </Combobox.Options>
         </Combobox.Dropdown>

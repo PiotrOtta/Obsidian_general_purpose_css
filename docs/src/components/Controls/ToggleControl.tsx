@@ -18,8 +18,6 @@ export function ToggleControl({
   evenGrid?: boolean;
   signalClear?: boolean;
 }) {
-  if (!data || !Object.keys(data).length) return null;
-
   const [selectedValues, setSelectedValues] = useState<Array<string>>([]);
 
   function handleSelectValue(value: string) {
@@ -50,6 +48,7 @@ export function ToggleControl({
     }
   }, [signalClear]);
 
+  if (!data || !Object.keys(data).length) return null;
   return (
     <Button.Group
       className={`ToggleControl-Group${vertical ? ' vertical' : ''}${evenGrid ? ' evenGrid' : ''}`}

@@ -1,5 +1,30 @@
-import { useEffect, useState } from 'react';
+import { memo, useEffect, useState } from 'react';
 import { Button, Grid, GridCol } from '@mantine/core';
+
+type TColorsColGroup = {
+  className: string;
+  disabled?: boolean;
+  selectedColor: string;
+  colorValue: string;
+  handleSelectColor: (value: string) => void;
+};
+const ColorsColGroup = memo(
+  (props: TColorsColGroup) => {
+    return (
+      <GridCol span="content" p={5}>
+        <Button
+          disabled={props.disabled}
+          className={`Colors-Control-Button ${props.selectedColor === props.className ? 'active' : ''}`}
+          title={props.className}
+          variant="filled"
+          color={props.colorValue}
+          onClick={() => props.handleSelectColor(props.className)}
+        />
+      </GridCol>
+    );
+  }
+  // () => true // propsAreEqual
+);
 
 export function ColorsControl({
   data,
@@ -12,17 +37,7 @@ export function ColorsControl({
   disabled?: boolean;
   signalClear?: boolean;
 }) {
-  if (!data || !Object.keys(data).length) return null;
   const [selectedColor, setSelectedColor] = useState('');
-
-  function handleSelectColor(value: string) {
-    if (value === selectedColor) {
-      setClassCode?.('');
-      return setSelectedColor('');
-    }
-    setClassCode?.(value);
-    setSelectedColor(value);
-  }
 
   useEffect(() => {
     return () => {
@@ -36,6 +51,16 @@ export function ColorsControl({
     }
   }, [signalClear]);
 
+  function handleSelectColor(value: string) {
+    if (value === selectedColor) {
+      setClassCode?.('');
+      return setSelectedColor('');
+    }
+    setClassCode?.(value);
+    setSelectedColor(value);
+  }
+
+  if (!data || !Object.keys(data).length) return null;
   return (
     <div
       className="Colors-Control"
@@ -50,16 +75,14 @@ export function ColorsControl({
         p={10}
       >
         {Object.entries(data).map(([className, colorValue]) => (
-          <GridCol key={`colors-btn-${className}`} span="content" p={5}>
-            <Button
-              disabled={disabled}
-              className={`Colors-Control-Button ${selectedColor === className ? 'active' : ''}`}
-              title={className}
-              variant="filled"
-              color={colorValue}
-              onClick={() => handleSelectColor(className)}
-            />
-          </GridCol>
+          <ColorsColGroup
+            key={`colors-btn-${className}`}
+            className={className}
+            disabled={disabled}
+            selectedColor={selectedColor}
+            colorValue={colorValue}
+            handleSelectColor={handleSelectColor}
+          />
         ))}
       </Grid>
     </div>

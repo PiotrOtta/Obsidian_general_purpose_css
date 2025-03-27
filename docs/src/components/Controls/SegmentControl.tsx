@@ -10,8 +10,6 @@ export function SegmentControl({
   setClassCode?: (val: string | number) => void;
   signalClear?: boolean;
 }) {
-  if (!data || !Object.keys(data).length) return null;
-
   const [selectedValue, setSelectedValue] = useState('');
 
   function handleSelectValue(event: SyntheticEvent) {
@@ -32,6 +30,7 @@ export function SegmentControl({
     }
   }, [signalClear]);
 
+  if (!data || !Object.keys(data).length) return null;
   return (
     <Container bg="paper.2" pl={4} pr={4} pt={6} pb={6} style={{ borderRadius: '0.4rem' }}>
       <SegmentedControl

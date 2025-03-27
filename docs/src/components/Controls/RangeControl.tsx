@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { TRange } from '@utils/interfaces';
 import { Container, Slider, Text } from '@mantine/core';
+import { useDebouncedState } from '@mantine/hooks';
 
 export function RangeControl({
   range,
@@ -15,16 +16,26 @@ export function RangeControl({
   setClassCode?: (val: string | number) => void;
   signalClear?: boolean;
 }) {
-  if (!range) return null;
-  const step = Math.floor(100 / range.length);
-
-  // const [value, setValue] = useDebouncedState(0, 10);
-  const [value, setValue] = useState<number>(0);
+  const [value, setValue] = useDebouncedState<number>(0, 10);
 
   useEffect(() => {
     const label = value === 0 ? '' : marks.find((el) => el.value === value)?.label;
     setClassCode?.(label || '');
   }, [value]);
+  useEffect(() => {
+    if (disabled || signalClear) {
+      setClassCode?.('');
+      setValue(0);
+    }
+  }, [disabled, signalClear]);
+  useEffect(() => {
+    return () => {
+      setValue(0);
+    };
+  }, []);
+
+  if (!range) return null;
+  const step = Math.floor(100 / range.length);
 
   const marks = [
     { value: 0, label: 'Off' },
@@ -33,19 +44,6 @@ export function RangeControl({
       label: el,
     })),
   ];
-
-  useEffect(() => {
-    if (disabled || signalClear) {
-      setClassCode?.('');
-      setValue(0);
-    }
-  }, [disabled, signalClear]);
-
-  useEffect(() => {
-    return () => {
-      setValue(0);
-    };
-  }, []);
 
   return (
     <Container
