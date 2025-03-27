@@ -2,11 +2,8 @@ import { render, screen } from '@test-utils';
 import { Welcome } from './Welcome';
 
 describe('Welcome component', () => {
-  it('has correct Vite guide link', () => {
+  it('has correct Obisidian page link', () => {
     render(<Welcome />);
-    expect(screen.getByText('this guide')).toHaveAttribute(
-      'href',
-      'https://mantine.dev/guides/vite/'
-    );
+    expect(screen.getByText('Obsidian')).toHaveAttribute('href', 'https://obsidian.md/');
   });
 });
