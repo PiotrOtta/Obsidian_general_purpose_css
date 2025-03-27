@@ -16,6 +16,8 @@ function _Image(props?: _htmlProps) {
   );
 }
 function _Blockquote(props?: _htmlProps) {
+  const [renderBlocks, setRenderBlocks] = useState<string | number>('');
+
   const renderBlockquote = (callout: TBlockquoteTypes | string | undefined) => {
     const _callout = callout || 'note';
     const _iconPath = (() => {
@@ -95,6 +97,7 @@ function _Blockquote(props?: _htmlProps) {
         data-callout-fold=""
         data-callout={_callout.toLowerCase()}
         className="callout"
+        key={`1-${_callout}`}
       >
         <div className="callout-title" dir="auto">
           <div className="callout-icon">
@@ -122,10 +125,8 @@ function _Blockquote(props?: _htmlProps) {
     );
   };
 
-  const [renderBlocks, setRenderBlocks] = useState<string | number>('');
-
   const blockquoteOptions = Object.fromEntries(
-    blockquoteArray.map((key) => [key, `${key[0].toUpperCase()}${key.slice(1)}`])
+    blockquoteArray?.map((key) => [key, `${key[0].toUpperCase()}${key.slice(1)}`])
   );
 
   return (
