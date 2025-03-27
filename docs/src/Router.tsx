@@ -1,12 +1,4 @@
-import DynamicDocsDocument from '@components/Docs/DynamicDocsDocument';
-import DefaultLayout from '@layouts/DefaultLayout';
-import DocsLayout from '@layouts/DocsLayout';
-import { AboutPage } from '@pages/AboutPage';
-import { DevPage } from '@pages/DevPage';
-import { InstallationDocs } from '@pages/docPages/InstallationDocs';
-import { UsageDocs } from '@pages/docPages/UsageDocs';
-import { ErrorPage } from '@pages/ErrorPage';
-import { HomePage } from '@pages/HomePage';
+import { lazy } from 'react';
 import {
   IconCode,
   IconHome,
@@ -23,6 +15,28 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import { ErrorDocs } from './pages/ErrorDocs';
+
+async function lazyAssignDefault(promiseModule: Promise<any>) {
+  const module = (await promiseModule) as { [name: string]: any };
+  const fallback = <>Component could not be loaded</>;
+  const componentName = Object.keys(module)?.at(-1);
+  if (module && componentName) {
+    return { default: module?.[componentName] || fallback };
+  }
+  return { default: fallback };
+}
+
+const DynamicDocsDocument = lazy(() => import('@components/Docs/DynamicDocsDocument'));
+const DefaultLayout = lazy(() => import('@layouts/DefaultLayout'));
+const DocsLayout = lazy(() => import('@layouts/DocsLayout'));
+const AboutPage = lazy(async () => await lazyAssignDefault(import('@pages/AboutPage')));
+const DevPage = lazy(async () => await lazyAssignDefault(import('@pages/DevPage')));
+const InstallationDocs = lazy(
+  async () => await lazyAssignDefault(import('@pages/docPages/InstallationDocs'))
+);
+const UsageDocs = lazy(async () => await lazyAssignDefault(import('@pages/docPages/UsageDocs')));
+const ErrorPage = lazy(async () => await lazyAssignDefault(import('@pages/ErrorPage')));
+const HomePage = lazy(async () => await lazyAssignDefault(import('@pages/HomePage')));
 
 interface ICustomRoute extends NonIndexRouteObject {
   hide?: boolean;
@@ -161,9 +175,9 @@ const routes: Array<ICustomRoute & RouteObject> = [
     ],
   },
 ];
-const isDev = import.meta.env.DEV;
+// const isDev = import.meta.env.DEV;
 const router = createBrowserRouter(routes, {
-  basename: isDev ? '/' : '/Obsidian_general_purpose_css/',
+  // basename: isDev ? '/' : '/Obsidian_general_purpose_css/',
 });
 
 export function Router() {
