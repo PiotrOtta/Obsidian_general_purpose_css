@@ -175,11 +175,10 @@ const routes: Array<ICustomRoute & RouteObject> = [
     ],
   },
 ];
-// const isDev = import.meta.env.DEV;
-const router = createBrowserRouter(routes, {
-  // basename: isDev ? '/' : '/Obsidian_general_purpose_css/',
-});
 
+const router = createBrowserRouter(routes, {
+  basename: import.meta.env.DEV ? '/' : '/Obsidian_general_purpose_css/',
+});
 export function Router() {
   return <RouterProvider router={router} />;
 }
