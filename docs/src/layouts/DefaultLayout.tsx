@@ -1,6 +1,6 @@
 import '@mantine/core/styles.css';
 
-import { Dispatch, JSX, SetStateAction, useEffect, useState } from 'react';
+import { Dispatch, JSX, SetStateAction, Suspense, useEffect, useState } from 'react';
 import { assingLinksToDocs, sanitizeRoutes } from '@utils/utils';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import {
@@ -9,6 +9,7 @@ import {
   AppShell,
   Burger,
   Group,
+  Loader,
   NavLink,
   ScrollArea,
   Text,
@@ -162,7 +163,16 @@ export default function DefaultLayout() {
       </AppShell.Navbar>
 
       <AppShell.Main>
-        <Outlet />
+        <Suspense
+          fallback={
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <Loader color="violet" size="xl" type="bars" />
+            </div>
+          }
+          key={location.pathname} // This ensures that the fallback will always trigger on route change.
+        >
+          <Outlet />
+        </Suspense>
       </AppShell.Main>
 
       <AppShell.Footer>
